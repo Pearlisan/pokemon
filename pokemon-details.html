@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/pokemon-detailpage.css">
+  <title>Detail page</title>
+</head>
+<body>
+  <!-- Go back -->
+   <div class="go-back-container">
+    <div class="arrow-key" id="back-button"><i class='bx bx-arrow-back bx-sm'></i></div>
+    <p class="pokemonName-detailpage">Bulbasaur</p>
+    <p class="pokemonId-detailpage">#001</p>
+   </div>
+
+   <section class="section">
+      <div class="pokemon-detail-container">
+        <img class="pokemon-img-detail-page" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="pokemon" >
+        <div class="type-detailpageContainer">
+          <p class="type-detailpage1">Grass</p>
+          <p class="type-detailpage2">Poison</p>
+        </div>
+        <h2>About</h2>
+
+        <div class="about-container">
+          <div class="about line">
+            <i class="fa-solid fa-weight-hanging"></i>
+            <p class="pokemonWeight">6.9kg</p>
+            <p class="about-labels">weight</p>
+          </div>
+          <div class="about line">
+            <i class="fa-solid fa-ruler-vertical"></i>
+            <p class="pokemonHeight">0.7m</p>
+            <p class="about-labels">height</p>
+          </div>
+          <div class="about two-abilities">
+            <p class="ability1">Overgrown</p>
+            <p class="ability2">Chlorophyll</p>
+            <p class="about-labels">abilities</p>
+          </div>
+        </div>
+        <p class="pokemon-flavortext">A strange seed was planted on its back at birth.The plant sprouts and grows with this POKéMON.</p>
+
+        <h2>Base Stats</h2>
+        <div class="base-stats-container">
+          <div class="base-stats">
+            <p >HP</p>
+            <p class="line-left hpNumber"></p>
+            <div class="empty-div">
+              <div class="filled-div hp-filled"></div>
+            </div>
+          </div>
+          <div class="base-stats">
+            <p >ATK</p>
+            <p class="line-left pokemonAttack">049</p>
+            <div class="empty-div">
+              <div class="filled-div atk-filled"></div>
+            </div>
+          </div>
+          <div class="base-stats">
+            <p>DEF</p>
+            <p class="line-left pokemonDefense">049</p>
+            <div class="empty-div">
+              <div class="filled-div def-filled"></div>
+            </div>
+          </div>
+          <div class="base-stats">
+            <p>SP.ATK</p>
+            <p class="line-left pokemonSpecialAttack">065</p>
+            <div class="empty-div">
+              <div class="filled-div sp-atk-filled"></div>
+            </div>
+          </div>
+          <div class="base-stats">
+            <p>SP.DEF</p>
+            <p class="line-left pokemonSpecialDefense">065</p>
+            <div class="empty-div">
+              <div class="filled-div sp-def-filled"></div>
+            </div>
+          </div>
+          <div class="base-stats">
+            <p>SPD</p>
+            <p class="line-left pokemonSpeed">045</p>
+            <div class="empty-div">
+              <div class="filled-div speed-filled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+   </section>
+  
+<script src="js/pokemon-details.js"></script>
+</body>
+</html>

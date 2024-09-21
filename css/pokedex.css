@@ -1,0 +1,288 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.body{
+  padding: 2em;
+  background-color: #f5f7fa;
+}
+.search-container{
+  margin-top: 1em;
+  margin-bottom: 1.3em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* justify-content: center; */
+  /* margin-bottom: 2em; */
+}
+
+/* search container css */
+.search-container i, 
+.search-input::placeholder, .search-btn-container button{
+  color: #899dd7;
+  opacity: 1; /* Firefox */
+}
+
+.search-container i:first-of-type{
+  position: absolute;
+  left: 10px;
+}
+.search-btn{
+  position: absolute;
+  right: 4px;
+  /* padding: .7em 2.6em; */
+  /* border-radius: 5px; */
+  /* background-color: #ffd030; */
+  border: none;
+}
+
+::-ms-search-input-placeholder { /* Edge 12 -18 */
+  color: #899dd7;
+}
+
+.search-input{
+  width: 100%;
+  padding: 0.8em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  padding-left: 3em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* filter container */
+.filter-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7em;
+}
+.filter-type-container{
+  display: flex;
+  align-items: center;
+  column-gap: .2em;
+  background-color: #fff;
+  padding: .3em .8em;
+  border-radius: 20px;
+  border: rgb(173, 172, 172) 1px solid;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* filter container select attribute */
+.filter-by-number-name{
+  padding: .3em .2em;
+  border-radius: 8px;
+  border: rgb(173, 172, 172) 1px solid;
+  font-weight: 700;
+  outline: none;
+}
+
+/* pokemon decks */
+.pokemon-deck-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 1em;
+  row-gap: 5em;
+  /* margin: 5em 0; */
+}
+.pokemon-deck-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #42c838;
+  border-radius: 10px;
+  position: relative;
+  gap: .5em;
+  /* height: 100%; */
+  padding: 100px 20px 20px 20px;
+}
+.pokemon-deck-card img{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  /* border-radius: 50%; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* top is set to half of the height */
+  top: -90px;
+}
+
+.pokemon-deck-card > p:first-of-type{
+  font-size: 1.2em;
+  font-weight: 900;
+  color: #fff;
+  cursor: pointer;
+}
+.pokemon-deck-card > p:last-of-type{
+  font-size: 1em;
+  color: #fff;
+}
+.power-container{
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  /* margin-top: 1em; */
+}
+.power-container p{
+  padding: .5em 1em;
+  border-radius: 20px;
+}
+.power-container p:first-of-type{
+  background-color: #6be462;
+  font-weight: 800;
+}
+.power-container p:nth-child(2){
+  background-color: #d69ef6;
+  font-weight: 800;
+}
+
+/* Dynamically changing  */
+.pokemon-deck-card[class*="grass"]{
+  background-color: #42c835;
+}
+.pokemon-deck-card[class*="fire"]{
+  background-color: #ec6e6e;
+}
+.pokemon-deck-card[class*="water"]{
+  background-color:#25aad5;
+}
+.pokemon-deck-card[class*="bug"]{
+  background-color: #a3bb45;
+}
+.pokemon-deck-card[class*="normal"]{
+  background-color: #b5b6b4;
+}
+.pokemon-deck-card[class*="poison"]{
+  background-color: #b97fc9;
+}
+.pokemon-deck-card[class*="electric"]{
+  background-color: #f7d034;
+}
+.pokemon-deck-card[class*="ground"]{
+  background-color: #e0c068;
+}
+.pokemon-deck-card[class*="fairy"]{
+  background-color: #f7b5f7;
+}
+.pokemon-deck-card[class*="fighting"]{
+  background-color: #d56723;
+}
+.pokemon-deck-card[class*="psychic"]{
+  background-color: #f85888;
+}
+.pokemon-deck-card[class*="rock"]{
+  background-color: #b6a136;
+}
+.pokemon-deck-card[class*="ghost"]{
+  background-color: #7d6b9b;
+}
+.pokemon-deck-card[class*="ice"]{
+  background-color: #96d9d6;
+}
+.pokemon-deck-card[class*="dragon"]{
+  background-color: #7367f0;
+}
+
+
+/* Changing background color of the power type displayOne */
+.power-container p:first-of-type[class*="grass"]{
+  background-color: #6be462;
+}
+.power-container p:first-of-type[class*="fire"]{
+  background-color: #fb6764;
+}
+.power-container p:first-of-type[class*="water"]{
+  background-color: #5fbcdb;
+}
+.power-container p:first-of-type[class*="bug"]{
+  background-color: #c9fa83;
+}
+.power-container p:first-of-type[class*="normal"]{
+  background-color: #dbddd9;
+}
+.power-container p:first-of-type[class*="poison"]{
+  background-color: #d69ef6;
+}
+.power-container p:nth-child(1)[class*="electric"]{
+  background-color: #f6e9b6;
+}
+.power-container p:nth-child(1)[class*="ground"]{
+  background-color: #fedd84;
+}
+.power-container p:nth-child(1)[class*="fairy"]{
+  background-color: #fed3fe;
+}
+.power-container p:nth-child(1)[class*="fighting"]{
+  background-color: #f6b27b;
+}
+.power-container p:nth-child(1)[class*="psychic"]{
+  background-color: #f6a6c6;
+}
+.power-container p:nth-child(1)[class*="rock"]{
+  background-color: #d9d3a3;
+}
+.power-container p:nth-child(1)[class*="ghost"]{
+  background-color: #b5a9c6;
+}
+.power-container p:nth-child(1)[class*="ice"]{
+  background-color: #b5e7e4;
+}
+.power-container p:nth-child(1)[class*="dragon"]{
+  background-color: #a9a5f6;
+}
+/* End of dynamically changing */
+
+/* Changing background color of the power type displayTwo */
+.power-container p:nth-child(2)[class*="grass"]{
+  background-color: #6be462;
+}
+.power-container p:nth-child(2)[class*="fire"]{
+  background-color: #fb6764;
+}
+.power-container p:nth-child(2)[class*="flying"]{
+  background-color: #3fa4ec;
+}
+.power-container p:nth-child(2)[class*="water"]{
+  background-color: #5fbcdb;
+}
+.power-container p:nth-child(2)[class*="bug"]{
+  background-color: #c9fa83;
+}
+.power-container p:nth-child(2)[class*="normal"]{
+  background-color: #dbddd9;
+}
+.power-container p:nth-child(2)[class*="poison"]{
+  background-color: #d69ef6;
+}
+.power-container p:nth-child(2)[class*="electric"]{
+  background-color: #f6e9b6;
+}
+.power-container p:nth-child(2)[class*="ground"]{
+  background-color: #fedd84;
+}
+.power-container p:nth-child(2)[class*="fairy"]{
+  background-color: #fed3fe;
+}
+.power-container p:nth-child(2)[class*="fighting"]{
+  background-color: #f6b27b;
+}
+.power-container p:nth-child(2)[class*="psychic"]{
+  background-color: #f6a6c6;
+}
+.power-container p:nth-child(2)[class*="rock"]{
+  background-color: #d9d3a3;
+}
+.power-container p:nth-child(2)[class*="ghost"]{
+  background-color: #b5a9c6;
+}
+.power-container p:nth-child(2)[class*="ice"]{
+  background-color: #b5e7e4;
+}
+.power-container p:nth-child(2)[class*="dragon"]{
+  background-color: #a9a5f6;
+}
+.power-container p:nth-child(2)[class*="steel"]{
+  background-color: #d9d9e3;
+}
+/* End of dynamically changing Two */

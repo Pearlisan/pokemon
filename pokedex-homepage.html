@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/pokedex.css">
+  <title>Pokedex</title>
+
+</head>
+<body class="body">
+  <div class="header">
+    <h1>Pokedex</h1>
+  </div>
+
+  <div class="search-container">
+      <i class='bx bx-search bx-sm'></i>
+      <input type="text" class="search-input" id="search-input" placeholder="Search Pokemon">
+      <i onclick="clearInput()" class='bx search-btn bx-x bx-sm'></i>
+      <!-- <button onclick="searchPokemon()" class="search-btn" id="search-btn">Search</button> -->
+  </div>
+
+  <div class="filter-container">
+    <select onchange="sortBy()" name="filter-by-numberName" class="filter-by-number-name" id="filter-by-number-name" >
+      <option value="">Choose an option</option>
+      <option value="1">Lowest Number First</option>
+      <option value="2">Highest Number First</option>
+      <option value="3">Name A to Z</option>
+      <option value="4">Name Z to A</option>
+    </select>
+    <div class="filter-type-container">
+      <i class='bx bx-filter bx-sm'></i>
+      <p>Filters</p>
+    </div>
+  </div>
+
+  <section class="pokemon-section">
+    
+    <div class="pokemon-deck-container" id="pokemon-deck-container">
+      <!-- <div class="pokemon-deck-card">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"  alt="" class="pokemonImg">
+          <p  class="pokemonName">Bulbasaur</p>
+          <p class="pokemonId">#001</p>
+          <div class="power-container">
+            <p class="pokemonType">fire</p>
+            <p class="pokemonType2">flying</p>
+          </div>
+      </div> -->
+    </div>
+
+  </section>
+
+<script src="js/pokedex.js"></script>
+</body>
+</html>
